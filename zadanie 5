@@ -1,0 +1,6 @@
+print ("Wpisz liczbe")
+z = float(input())
+if(z > 0):
+    print ("Liczba jest dodatnia")
+elif(z < 0):
+    print ("Liczba jest ujemna")
