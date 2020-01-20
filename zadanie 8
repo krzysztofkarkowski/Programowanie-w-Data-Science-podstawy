@@ -1,0 +1,14 @@
+print ("Wpisz liczbe punktów ze sprawdzianu")
+a = int(input())
+if (a<16):
+    print("Otrzymałeś ocene ndst")
+elif (a>=16 and a<20):
+    print("Otrzymałeś ocene dop")
+elif (a>=20 and a<28):
+    print("Otrzymałeś ocene dost")
+elif (a>=28 and a<34):
+    print("Otrzymałeś ocene db")
+elif (a>=34 and a<40):
+    print("Otrzymałeś ocene bdb")
+elif (a==40):
+    print("Otrzymałeś ocene cel")
