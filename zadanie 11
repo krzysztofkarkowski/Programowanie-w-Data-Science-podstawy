@@ -1,0 +1,17 @@
+print("Podaj liczbe aby obliczyć silnie")
+silnia = int(input())
+wynik=1
+for i in range(1,silnia+1):
+     wynik=wynik*i
+     print (i)
+print (wynik)
+
+
+
+
+def silnia(a): 
+  wynik=1
+  for i in range(1,a+1):
+     wynik=wynik*i
+     print (i)
+  return wynik
