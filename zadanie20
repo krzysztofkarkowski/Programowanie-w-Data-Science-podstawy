@@ -1,0 +1,14 @@
+tlumacz = {"styczen":"january", "luty":"february", "marzec":"march","kwiecien":"april","maj":"may","czerwiec":"june","lipiec":"july","sierpien":"august","wrzesien":"september","pazdziernik":"october","listopad":"november","grudzien":"december"}
+
+styczen=tlumacz ["styczen"]
+luty=tlumacz ["luty"]
+marzec=tlumacz ["marzec"]
+kwiecien=tlumacz ["kwiecien"]
+maj=tlumacz ["maj"]
+czerwiec=tlumacz ["czerwiec"] 
+lipiec=tlumacz ["lipiec"]
+sierpien=tlumacz["sierpien"]
+wrzesien=tlumacz ["wrzesien"]
+pazdziernik=tlumacz ["pazdziernik"]
+listopad=tlumacz ["listopad"]
+grudzien=tlumacz ["grudzien"]
