@@ -1,0 +1,16 @@
+import scipy.stats as s
+
+print ("Wprowadź pierwszą liste")
+a = int(input())
+b = int(input())
+c = int(input())
+moja_lista = [a,b,c] 
+
+print ("Wprowadź drugą liste")
+d = int(input())
+e = int(input())
+f = int(input())
+moja_lista2 = [d,e,f]  
+
+wynik = s.pearsonr(moja_lista,moja_lista2) 
+print (wynik)
