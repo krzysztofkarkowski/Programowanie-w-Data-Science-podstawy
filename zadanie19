@@ -1,0 +1,14 @@
+miesiac = {"styczen":31, "luty":28/29, "marzec":31,"kwiecien":30,"maj":31,"czerwiec":30,"lipiec":31,"sierpien":31,"wrzesien":30,"pazdziernik":31,"listopad":30,"grudzien":31}
+
+styczen=miesiac ["styczen"]
+luty=miesiac ["luty"]
+marzec=miesiac ["marzec"]
+kwiecien=miesiac ["kwiecien"]
+maj=miesiac ["maj"]
+czerwiec=miesiac ["czerwiec"] 
+lipiec=miesiac ["lipiec"]
+sierpien=miesiac["sierpien"]
+wrzesien=miesiac ["wrzesien"]
+pazdziernik=miesiac ["pazdziernik"]
+listopad=miesiac ["listopad"]
+grudzien=miesiac ["grudzien"]
