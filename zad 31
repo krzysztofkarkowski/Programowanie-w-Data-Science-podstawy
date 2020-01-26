@@ -1,6 +1,0 @@
-from math import sqrt
-import numpy as np
-
-def matrix(b):
-    x = np.random.choice(np.array([0, 255]), (b,b))
-    print(x)
