@@ -1,0 +1,68 @@
+class Vector3D():
+    
+    def __init__(self, x, y, z):
+        self.x = x
+        self.y = y
+        self.z = z
+    #wyswietlanie danych
+    def display(self):
+        print("x="+str(self.x)+", y="+str(self.y) + ", z=" + str(self.z))
+    #dodwanie wektorów    
+    def add(self, other):
+        self.x = self.x + other.x
+        self.y = self.y + other.y
+        self.z = self.z + other.z
+        suma = self.x,self.y,self.z
+        return suma
+    #odejmowanie wektorów    
+    def substr(self, other):
+        self.x = self.x - other.x
+        self.y = self.y - other.y
+        self.z = self.z - other.z
+        roznica = self.x,self.y,self.z
+        return roznica
+    #mnożenie wektrów przez liczbe      
+    def multByNumber(self, a):
+        self.x = a*self.x
+        self.y = a*self.y
+        self.z = a*self.z
+        iloczyn = self.x,self.y,self.z
+        return iloczyn
+     #mnożenie skalarnie   
+    def dotProd(self, other):
+        return self.x*other.x + self.y*other.y + self.z*other.z
+    #obracanie wektora o kąt    
+    def crossProd(self, other):
+        new_x = self.y*other.z - self.z*other.y
+        new_y = self.z*other.x - self.x*other.z
+        new_z = self.x*other.y - self.y*other.x
+        
+        return Vector3D(new_x, new_y, new_z)
+    #moduł 
+    def modulus(self):
+        return (self.x**2 + self.y**2 + self.z**2)**0.5
+    #wekotry przeciwne    
+    def opposite(self):
+        self.x = -self.x
+        self.y = -self.y
+        self.z = -self.z
+        reute = self.x,self.y,self.z
+        return reute
+
+vector1 = Vector3D(5,10,15)
+vector2 = Vector3D(20,25,30)
+vector3 = Vector3D(35,40,45)
+vector4 = Vector3D(50,55,60)
+vector5 = Vector3D(65,70,75)
+vector6 = Vector3D(80,85,90)
+vector7 = Vector3D(95,100,105)
+vector8 = Vector3D(110,115,120)
+print(vector2.display())
+print(vector4.add(vector3))
+print(vector8.substr(vector1))
+print(vector3.dotProd(vector7))
+print(vector1.multByNumber(5))
+print(vector1.modulus())
+print(vector3.opposite())
+print(vector1.rotate(3))
+
