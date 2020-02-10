@@ -1,0 +1,13 @@
+a=int(input("Podaj A"))
+b=int(input("Podaj B"))
+
+plik = open("dane.txt","w")
+for x in range(1,10):
+ x=int(x)
+ y=a*x+b
+ plik.write("\n Dla X=")
+ plik.write(str(x))
+ plik.write(" Y=")
+ plik.write(str(y))
+ print(y)
+plik.close()
