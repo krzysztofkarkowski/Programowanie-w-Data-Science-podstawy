@@ -1,0 +1,316 @@
+1. Napisz skrypt, który będzie wyświetlać wszystkie kolejne dzielniki wprowadzonej liczby:
+
+In: 
+
+print ("Wprowadź liczbe")
+liczba = int(input())
+
+for i in range (2, liczba+1):
+    if(liczba%i == 0 ):
+
+        print(i)
+
+2. Korzystając z pojęcia funkcji utwórz skrypt, który będzie miał możliwość zamiany temperatury pomiędzy skalami Celsjusza i Fahrenheita (w obie strony). C = (F-32)x(5/9), F = (C*9/5)+32        
+ 
+In:
+
+   def tempF(C):
+	F = (C*9/5)+32
+	print(F)
+  
+def tempC(F):
+	C = (F-32)*(5/9)
+	print(C)     
+        
+5. Utwórz skrypt, który będzie komunikować, czy wprowadzona liczba jest dodatnia czy nie
+
+print ("Wpisz liczbe")
+z = float(input())
+if(z > 0):
+    print ("Liczba jest dodatnia")
+elif(z < 0):
+    print ("Liczba jest ujemna")
+    
+6. Utwórz skrypt dodający ułamki zwykłe
+
+from fractions import Fraction
+Fraction (3,5) + Fraction (6,10) 
+
+8. W klasie przeprowadzono sprawdzian, za który uczniowie mogli otrzymać maksymalnie 40 punktów. Skala ocen w szkole jest następująca: 0-39% - ndst, 40-49% - dop, 50-69% - dst, 70-84% - db, 85-99% - bdb, 100% - cel. Utwórz skrypt z interfejsem tekstowym, który na podstawie podanej liczby punktów ze sprawdzianu wyświetli ocenę jaka się należy (skorzystaj z konstrukcji if, elif, else)
+
+print ("Wpisz liczbe punktów ze sprawdzianu")
+a = int(input())
+if (a<16):
+    print("Otrzymałeś ocene ndst")
+elif (a>=16 and a<20):
+    print("Otrzymałeś ocene dop")
+elif (a>=20 and a<28):
+    print("Otrzymałeś ocene dost")
+elif (a>=28 and a<34):
+    print("Otrzymałeś ocene db")
+elif (a>=34 and a<40):
+    print("Otrzymałeś ocene bdb")
+elif (a==40):
+    print("Otrzymałeś ocene cel")
+    
+11. Utwórz skrypt z interfejsem tekstowym który obliczy silnię od danego argumentu. Wykonać zadanie na dwa sposoby - iteracyjnie i rekurencyjnie
+
+print("Podaj liczbe aby obliczyć silnie")
+silnia = int(input())
+wynik=1
+for i in range(1,silnia+1):
+     wynik=wynik*i
+     print (i)
+print (wynik)
+
+
+def silnia(a): 
+  wynik=1
+  for i in range(1,a+1):
+     wynik=wynik*i
+     print (i)
+  return wynik
+  
+12. Utworzyć skrypt z interfejsem tekstowym obliczający n-ty element ciągu Fibonacciego - wykonać zadanie iteracyjnie i rekurencyjnie
+
+print("Oblicz n'ty element ciągu Fibonacciego")
+def fib(a):
+   if a < 1:
+      return 0
+   if a < 2:
+      return 1 
+   wynik = fib(a - 1) + fib(a - 2)
+   return wynik 
+    
+   
+ def fib(a):
+    b = 0
+    c = 1
+  
+    for i in range(a):
+        b, c = c, b+c
+        
+    return b
+    
+ 18. Utwórz pętlę, która w zależności od wartości licznika - (i na podstawie rozwiązania zadania 17. Licznik pętli ma być argumentem funkcji z zadania 17) będzie generować zestawy danych oraz zapisywać je w katalogu na dysku komputera w formie pliku tekstowego.
+ 
+ a=int(input("Podaj A"))
+b=int(input("Podaj B"))
+
+plik = open("dane.txt","w")
+for x in range(1,10):
+ x=int(x)
+ y=a*x+b
+ plik.write("\n Dla X=")
+ plik.write(str(x))
+ plik.write(" Y=")
+ plik.write(str(y))
+ print(y)
+plik.close()
+
+19. Korzystając ze słownika, utwórz funkcję, która będzie zwracać liczbę dni danego miesiąca w roku
+
+miesiac = {"styczen":31, "luty":28/29, "marzec":31,"kwiecien":30,"maj":31,"czerwiec":30,"lipiec":31,"sierpien":31,"wrzesien":30,"pazdziernik":31,"listopad":30,"grudzien":31}
+
+styczen=miesiac ["styczen"]
+luty=miesiac ["luty"]
+marzec=miesiac ["marzec"]
+kwiecien=miesiac ["kwiecien"]
+maj=miesiac ["maj"]
+czerwiec=miesiac ["czerwiec"] 
+lipiec=miesiac ["lipiec"]
+sierpien=miesiac["sierpien"]
+wrzesien=miesiac ["wrzesien"]
+pazdziernik=miesiac ["pazdziernik"]
+listopad=miesiac ["listopad"]
+grudzien=miesiac ["grudzien"]
+
+20. Korzystając ze słownika, utwórz funkcję, która będzie zwracać tłumaczenia nazw miesięcy z języka polskiego na angielski
+
+tlumacz = {"styczen":"january", "luty":"february", "marzec":"march","kwiecien":"april","maj":"may","czerwiec":"june","lipiec":"july","sierpien":"august","wrzesien":"september","pazdziernik":"october","listopad":"november","grudzien":"december"}
+
+styczen=tlumacz ["styczen"]
+luty=tlumacz ["luty"]
+marzec=tlumacz ["marzec"]
+kwiecien=tlumacz ["kwiecien"]
+maj=tlumacz ["maj"]
+czerwiec=tlumacz ["czerwiec"] 
+lipiec=tlumacz ["lipiec"]
+sierpien=tlumacz["sierpien"]
+wrzesien=tlumacz ["wrzesien"]
+pazdziernik=tlumacz ["pazdziernik"]
+listopad=tlumacz ["listopad"]
+grudzien=tlumacz ["grudzien"]
+
+28. Utwórz funkcję, która jako argument będzie przyjmować dwie listy o równej liczbie elementów, a jej wynikiem będzie współczynnik korelacji
+
+import scipy.stats as s
+
+print ("Wprowadź pierwszą liste")
+a = int(input())
+b = int(input())
+c = int(input())
+moja_lista = [a,b,c] 
+
+print ("Wprowadź drugą liste")
+d = int(input())
+e = int(input())
+f = int(input())
+moja_lista2 = [d,e,f]  
+
+wynik = s.pearsonr(moja_lista,moja_lista2) 
+print (wynik)
+
+31. Korzystając z instrukcji np.random.choice oraz reshape z pakietu numpy stworzyć funkcję generują macierz kwadratową stopnia N wypełnioną wartościami 0 i 255 w losowy sposób
+
+from math import sqrt
+import numpy as np
+
+def matrix(b):
+    x = np.random.choice(np.array([0, 255]), (b,b))
+    print(x)
+    
+ 
+ 
+PROJEKT 2:
+
+import numpy as np
+import math
+
+class Vector2D():
+    #inicjalizacja
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+    #wyswietlanie danych
+    def display(self):
+        print("x="+str(self.x)+", y="+str(self.y))
+   #dodwanie wektorów
+    def add(self, other):
+        self.x = self.x + other.x
+        self.y = self.y + other.y
+        suma = self.x,self.y
+        return suma
+   #odejmowanie wektorów  
+    def substr(self, other):
+        self.x = self.x - other.x
+        self.y = self.y - other.y
+        roznica = self.x,self.y
+        return roznica
+  #mnożenie wektrów przez liczbe  
+    def multByNumber(self, a):
+        self.x = a*self.x
+        self.y = a*self.y
+        iloczyn = self.x,self.y
+        return iloczyn
+  #mnożenie skalarnie    
+    def dotProd(self, other):
+        return self.x*other.x + self.y*other.y 
+  #obracanie wektora o kąt
+    def rotate(self, alfa):
+        alfaDeg = alfa*math.pi/180
+        sinus = math.sin(alfaDeg)
+        cosinus = math.cos(alfaDeg)
+        x = self.x
+        y = self.y       
+        self.x = x*cosinus - y*sinus
+        self.y = x*sinus + y*cosinus
+        route = self.x,self.y
+        return route
+   #moduł     
+    def modulus(self):
+        return (self.x**2 + self.y**2)**0.5
+  #wekotry przeciwne
+    def opposite(self):
+        self.x = -self.x
+        self.y = -self.y
+        przeciwne = self.x,self.y
+        return przeciwne
+
+vector1 = Vector2D(5,10)
+vector2 = Vector2D(10,15)
+vector3 = Vector2D(15,20)
+vector4 = Vector2D(20,25)
+vector5 = Vector2D(25,30)
+vector6 = Vector2D(30,35)
+vector7 = Vector2D(35,40)
+vector8 = Vector2D(40,45)
+print(vector2.display())
+print(vector4.add(vector3))
+print(vector8.substr(vector1))
+print(vector3.dotProd(vector7))
+print(vector1.multByNumber(5))
+print(vector1.modulus())
+print(vector3.opposite())
+print(vector1.rotate(3))
+
+
+PROJEKT 3:
+
+class Vector3D():
+    
+    def __init__(self, x, y, z):
+        self.x = x
+        self.y = y
+        self.z = z
+    #wyswietlanie danych
+    def display(self):
+        print("x="+str(self.x)+", y="+str(self.y) + ", z=" + str(self.z))
+    #dodwanie wektorów    
+    def add(self, other):
+        self.x = self.x + other.x
+        self.y = self.y + other.y
+        self.z = self.z + other.z
+        suma = self.x,self.y,self.z
+        return suma
+    #odejmowanie wektorów    
+    def substr(self, other):
+        self.x = self.x - other.x
+        self.y = self.y - other.y
+        self.z = self.z - other.z
+        roznica = self.x,self.y,self.z
+        return roznica
+    #mnożenie wektrów przez liczbe      
+    def multByNumber(self, a):
+        self.x = a*self.x
+        self.y = a*self.y
+        self.z = a*self.z
+        iloczyn = self.x,self.y,self.z
+        return iloczyn
+     #mnożenie skalarnie   
+    def dotProd(self, other):
+        return self.x*other.x + self.y*other.y + self.z*other.z
+    #obracanie wektora o kąt    
+    def crossProd(self, other):
+        new_x = self.y*other.z - self.z*other.y
+        new_y = self.z*other.x - self.x*other.z
+        new_z = self.x*other.y - self.y*other.x
+        
+        return Vector3D(new_x, new_y, new_z)
+    #moduł 
+    def modulus(self):
+        return (self.x**2 + self.y**2 + self.z**2)**0.5
+    #wekotry przeciwne    
+    def opposite(self):
+        self.x = -self.x
+        self.y = -self.y
+        self.z = -self.z
+        reute = self.x,self.y,self.z
+        return reute
+
+vector1 = Vector3D(5,10,15)
+vector2 = Vector3D(20,25,30)
+vector3 = Vector3D(35,40,45)
+vector4 = Vector3D(50,55,60)
+vector5 = Vector3D(65,70,75)
+vector6 = Vector3D(80,85,90)
+vector7 = Vector3D(95,100,105)
+vector8 = Vector3D(110,115,120)
+print(vector2.display())
+print(vector4.add(vector3))
+print(vector8.substr(vector1))
+print(vector3.dotProd(vector7))
+print(vector1.multByNumber(5))
+print(vector1.modulus())
+print(vector3.opposite())
+print(vector1.rotate(3))
